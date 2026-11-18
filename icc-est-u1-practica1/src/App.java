@@ -65,6 +65,7 @@ public class App {
         }
         System.out.println("----------------------------------------------------------------------------------------");
 
+
         // C4
         // Nota descendente; nombre ascendente (reversed y thenComparing) 
         List<Estudiante> c4 = new ArrayList<>(estudiantes);
@@ -76,6 +77,7 @@ public class App {
             System.out.println("  " + est);
         }
         System.out.println("----------------------------------------------------------------------------------------");
+
 
 
         // C5
@@ -90,6 +92,7 @@ public class App {
         }
         System.out.println("----------------------------------------------------------------------------------------");
 
+
         // C6
         // Carrera asc; nota desc; nombre asc; código asc
         List<Estudiante> c6 = new ArrayList<>(estudiantes);
@@ -103,6 +106,7 @@ public class App {
             System.out.println("  " + est);
         }
         System.out.println("----------------------------------------------------------------------------------------");
+
 
         // C7
         // Nota ajustada descendente; nombre ascendente; código ascendente
@@ -122,7 +126,16 @@ public class App {
         System.out.println("Ejemplo 7");
         System.out.println("Nota ajustada descendente, nombre ascendente, código ascendente");
         for (Estudiante est : c7) {
-            System.out.println("  " + est);
+            double notaAjustada = est.getCarrera().equals("Computacion") 
+                          ? Math.min(10.0, est.getNota() + 0.5) 
+                          : est.getNota();
+                          
+            System.out.println(" Estudiante [codigo=" + est.getCodigo() 
+                       + ", nombre=" + est.getNombre() 
+                       + ", edad=" + est.getEdad() 
+                       + ", nota=" + notaAjustada 
+                       + ", carrera=" + est.getCarrera() + "]");
+
         }
         System.out.println("----------------------------------------------------------------------------------------");
 
