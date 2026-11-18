@@ -94,7 +94,7 @@ public class App {
 
 
         // C6
-        // Carrera asc; nota desc; nombre asc; código asc
+        // Carrera ascendente; nota descendente; nombre ascendente; código ascendente   
         List<Estudiante> c6 = new ArrayList<>(estudiantes);
         c6.sort(Comparator.comparing(Estudiante::getCarrera)
                           .thenComparing(Comparator.comparingDouble(Estudiante::getNota).reversed())
@@ -129,7 +129,7 @@ public class App {
             double notaAjustada = est.getCarrera().equals("Computacion") 
                           ? Math.min(10.0, est.getNota() + 0.5) 
                           : est.getNota();
-                          
+
             System.out.println(" Estudiante [codigo=" + est.getCodigo() 
                        + ", nombre=" + est.getNombre() 
                        + ", edad=" + est.getEdad() 
