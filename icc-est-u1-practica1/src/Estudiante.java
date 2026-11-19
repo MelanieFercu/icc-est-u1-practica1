@@ -45,8 +45,5 @@ public class Estudiante implements Comparable<Estudiante> {
         return this.codigo.compareTo(otro.getCodigo());
 
     }
-
- 
-
     
 }
