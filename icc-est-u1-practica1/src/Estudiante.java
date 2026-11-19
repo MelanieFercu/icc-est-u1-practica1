@@ -1,12 +1,9 @@
 public class Estudiante implements Comparable<Estudiante> {
-    private String codigo;
-    private String nombre;
-    private int edad;
-    private double nota;
-    private String carrera;
-
-    public Estudiante() {
-    }
+    private final String codigo;
+    private final String nombre;
+    private final int edad;
+    private final double nota;
+    private final String carrera;
 
     public Estudiante(String codigo, String nombre, int edad, double nota, String carrera) {
         this.codigo = codigo;
@@ -20,40 +17,21 @@ public class Estudiante implements Comparable<Estudiante> {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
     public String getNombre() {
         return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public int getEdad() {
         return edad;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
     public double getNota() {
         return nota;
     }
 
-    public void setNota(double nota) {
-        this.nota = nota;
-    }
 
     public String getCarrera() {
         return carrera;
-    }
-
-    public void setCarrera(String carrera) {
-        this.carrera = carrera;
     }
 
     @Override
